@@ -3,10 +3,10 @@ import numpy as np
 import sys
 import os
 
-# Add the current directory to Python path for imports
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+# Add the src directory to Python path for imports
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 
-from rover import TrajectoryGenerator, MotionModel, RoverSimulation
+from robo_localization.simulation import TrajectoryGenerator, MotionModel, RoverSimulation
 
 
 class TestTrajectoryGenerator:
@@ -524,4 +524,4 @@ class TestRoverIntegration:
 
 
 if __name__ == "__main__":
-    pytest.main([__file__]) 
+    pytest.main([__file__])

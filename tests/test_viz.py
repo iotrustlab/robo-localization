@@ -4,10 +4,10 @@ import sys
 import os
 from unittest.mock import Mock, patch, MagicMock
 
-# Add the project root to the path
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# Add the src directory to Python path for imports
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 
-from viz import RealTimeVisualizer, TrajectoryPlotter, SensorHealthMonitor, MetricsDisplay
+from robo_localization.visualization import RealTimeVisualizer, TrajectoryPlotter, SensorHealthMonitor, MetricsDisplay
 
 
 class TestRealTimeVisualizer:
@@ -518,4 +518,8 @@ class TestVisualizationIntegration:
         # Should update all plot elements
         assert visualizer.position_line.set_data_3d.called
         assert visualizer.ground_truth_line.set_data_3d.called
-        assert visualizer.ax.set_xlim.called 
+        assert visualizer.ax.set_xlim.called
+
+
+if __name__ == "__main__":
+    pytest.main([__file__])
