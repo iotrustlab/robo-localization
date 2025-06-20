@@ -1,0 +1,11 @@
+---
+description: 
+globs: *.py
+alwaysApply: false
+---
+- Use numpy arrays for all numerical computations
+- Avoid loops for matrix operations - use vectorized operations
+- Use scipy.linalg for matrix decompositions and inversions
+- Add shape assertions for matrix operations
+- Use descriptive variable names for matrices (P_cov, H_jacobian)
+- Handle numerical edge cases (matrix inversion, sqrt of negatives)

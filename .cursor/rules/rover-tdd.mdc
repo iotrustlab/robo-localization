@@ -1,0 +1,12 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+- Write unit tests BEFORE implementing functionality
+- Tests must verify mathematical correctness, not curve-fit to specific outputs
+- Use pytest fixtures for sensor data generation
+- Test edge cases: sensor dropouts, high noise, initialization
+- Verify coordinate frame transformations with known values
+- Assert filter convergence properties, not exact numerical outputs
+- If tests fail, fix the implementation logic, never adjust test expectations

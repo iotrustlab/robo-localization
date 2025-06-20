@@ -1,0 +1,11 @@
+---
+description: 
+globs: *kalman*.py,*fusion*.py,*filter*.py
+alwaysApply: false
+---
+- State vector: [x, y, z, vx, vy, vz, roll, pitch, yaw, bias_terms]
+- Use proper covariance matrix initialization
+- Implement Joseph form for numerical stability
+- Handle measurement rejection for outliers
+- Process noise must reflect actual system dynamics
+- Log filter statistics: innovation, covariance trace, residuals
